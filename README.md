@@ -7,6 +7,7 @@ socket.io, express, mongodb를 활용해 만든 JS 기반의 채팅서버입니�
 Web 서비스와 Mobile App 모두에 연결됩니다.
 
 - indexing을 위한 별도의 코드 필요.
+- HTTPS 적용 필요
 
 www.lunchting.com
 
