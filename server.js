@@ -123,3 +123,82 @@ io.on('connection', function (socket) {
   });
 
 });
+
+
+// Refer below codes for Push Notification.
+// Must include var Expo = require('exponent-server-sdk');
+// To Use Expo Library
+// // To check if something is a push token
+// let isPushToken = Expo.isExponentPushToken("ExponentPushToken[OT4xXrG15AThMFGijxtTnc]");
+// console.log("유효토큰 여부: ", isPushToken);
+// // Create a new Expo SDK client
+// let expo = new Expo();
+
+// To send push notifications -- note that there is a limit on the number of
+// notifications you can send at once, use expo.chunkPushNotifications()
+
+
+// (async function() {
+//   try {
+//     let receipts = await expo.sendPushNotificationsAsync([{
+//       // The push token for the app user to whom you want to send the notification
+//       // to: 토큰명
+//       // to: 'ExponentPushToken[OT4xXrG15AThMFGijxtTnc]',
+//       to: 'ExponentPushToken[9pvPbtHXDndTAe8EiJK0V-]',
+//
+//       // 수신 시 소리
+//       sound: null,
+//
+//       priority : 'high',
+//
+//       // 앱에 뜨는 숫자
+//       badge: 2,
+//
+//       // 푸쉬알림의 제목이라고 한다.
+//       // title: '푸쉬알림 제목',
+//       body: '런치팅에 오신 것을 환영합니다 😎',
+//       // 앱에 푸쉬알림과 함께 보낼 데이터, 이를 통해 사후 처리를 할 수 있다.
+//       data: {withSome: '키키'},
+//     }]);
+//     console.log(receipts);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// })();
+
+
+
+
+
+
+
+//
+//
+//
+//
+// app.use(bodyParser.json());
+//
+// POST 라우팅 설정
+// app.post('/chats', (req, res) => {
+//   var newChat = new Chat({
+//     text: req.body.text
+//   });
+//   newChat.save().then((doc)=>{
+//     res.send(doc);
+//   }, (e) => {
+//     res.status(400).send(e);
+//   });
+// });
+//
+// app.post('/getchats', (req, res) => {
+//   Chat.find().then((chats) => {
+//     res.send({chats});
+//   }, (e) => {
+//     res.status(400).send(e);
+//   });
+// });
+//
+//
+// app.listen(3000, ()=>{
+//   console.log('Started Server. Listening on 3000 :'.green.underline);
+// })
